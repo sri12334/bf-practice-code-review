@@ -1,7 +1,10 @@
-import { solutionName } from './solution.js';
+import { intersection } from './solution.js';
 
-describe('add two numbers', () => {
-    it(' 1 + 2 -> 3', () => {
-        expect(solutionName(1, 2)).toEqual(3);
+describe('Creates an array of values that are in both the first and the second arrays', () => {
+    it('[2, 1], [2, 3] -> [3]', () => {
+        expect(intersection([2, 1], [2, 3])).toEqual([2]);
+    });
+    it('[2, 1, 2], [2, 3] -> [3]', () => {
+        expect(intersection([2, 1, 2], [2, 3])).toEqual([2]);
     });
 });

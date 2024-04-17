@@ -1,11 +1,11 @@
 /** .........
- * Sum of two numbers.
+ * Splits an object into multiple objects with one key/value pair each.
+ * The new objects are returned in an array.
  *
- * @param {number} num1 - The first number to sum.
- * @param {number} num2 - The second number to sum.
- * @returns {number} The sum of num1 and num2.
+ * @param {Object} [toSeparate={}] - The object to split into key/value pairs.
+ * @returns {Array} Returns a new array with one entry for each key/value pair.
  */
 
-export const solutionName = (num1, num2) => {
-    return num1 + num2;
+export const splitObject = (toSeparate = {}) => {
+    return Object.entries(toSeparate).map(([key, value]) => ({ [key]: value }));
 };
