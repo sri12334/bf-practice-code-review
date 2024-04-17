@@ -1,10 +1,13 @@
-/** .........
- * Sum of two numbers.
+/** ..........
+ * Converts a nested array into a single array with no nesting.
  *
- * @param {number} num1 - The first number to sum.
- * @param {number} num2 - The second number to sum.
- * @returns {number} The sum of num1 and num2.
+ * It returns a new array and there are no side-effects
+ *
+ * @param {Array} [array=[]] - The array to flatten.
+ * @returns {Array} Returns the new flattened array.
+ *
  */
-export const solutionName = (num1, num2) => {
-    return num1 + num2;
+
+export const deepFlat = (array = []) => {
+    return array.flat(Infinity);
 };
